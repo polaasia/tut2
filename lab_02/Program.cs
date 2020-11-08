@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using System.Xml.Serialization;
 
 namespace lab_02
@@ -31,7 +32,10 @@ namespace lab_02
 
                         if (student.Length == 9)
                         {
-                            if (false){/* check if surname does not contain digit*/ }
+                        
+                            if (false){
+                                  //check if surname does not contain digit
+                            }
                             else {
                                 var studies = new Studies { StudiesName = student[2], StudiesMode = student[3], numberOfStudents = 0 };
 
