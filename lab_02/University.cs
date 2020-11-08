@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace lab_02
 {
+    [Serializable]
     public class University
     {
         public DateTime CreatedAt { get; set; }

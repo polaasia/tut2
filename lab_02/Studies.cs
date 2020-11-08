@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Xml.Serialization;
 
 namespace lab_02
 {
+    [Serializable]
     public class Studies
     {
         [XmlElement(ElementName ="name")]
@@ -13,6 +12,7 @@ namespace lab_02
         [XmlElement(ElementName ="mode")]
         public string StudiesMode { get; set; }
 
-        public int numberOfStudents;
+        [XmlElement(ElementName ="number of students")]
+        public int numberOfStudents = 0;
     }
 }

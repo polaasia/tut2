@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Text.Json.Serialization;
 using System.Xml.Serialization;
 
 namespace lab_02
 {
+    [Serializable]
     public class Student
     {
         [XmlAttribute(AttributeName = "indexNumber")]
         public string IDStudent { get; set; }
-
 
         [XmlElement(ElementName = "fname")]
         public string FirstName { get; set; }
@@ -33,7 +30,7 @@ namespace lab_02
         public string FathersName { get; set; }
 
         [XmlElement(ElementName ="studies")]
-        public object Studies { get; set; }
+        public object StStudies { get; set; }
 
 
     }
