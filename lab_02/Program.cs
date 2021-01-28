@@ -19,7 +19,7 @@ namespace lab_02
             var studieslist = new List<Studies>();
             var errors = new List<string>();
 
-            FileInfo file = new FileInfo("C:\\DZO\\STUDIA\\SEMESTR 5\\APBD\\WEEK_02\\dane.csv");
+            FileInfo file = new FileInfo("dane.csv");
 
             if (file.Exists)
             {
@@ -33,10 +33,10 @@ namespace lab_02
                         if (student.Length == 9)
                         {
                         
-                            if (false){
-                                  //check if surname does not contain digit
-                            }
-                            else {
+                            if (!student[1].Contains("\\d*")){
+                               
+      
+                           
                                 var studies = new Studies { StudiesName = student[2], StudiesMode = student[3], numberOfStudents = 0 };
 
                                 var st = new Student
@@ -62,7 +62,11 @@ namespace lab_02
                                     studieslist.Add(studies);
                                     studies.numberOfStudents = 1;
                                 }
-                            } 
+                            }
+                            else
+                            {
+                                errors.Add(student.ToString());
+                            }
                         }
                         else
                         {

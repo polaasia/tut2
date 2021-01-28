@@ -1,4 +1,5 @@
 ﻿using System;
+
 using System.Xml.Serialization;
 
 namespace lab_02
@@ -6,6 +7,7 @@ namespace lab_02
     [Serializable]
     public class Student
     {
+        
         [XmlAttribute(AttributeName = "indexNumber")]
         public string IDStudent { get; set; }
 
@@ -29,7 +31,8 @@ namespace lab_02
         [XmlElement(ElementName = "fathersName")]
         public string FathersName { get; set; }
 
-        [XmlElement(ElementName ="studies")]
+     
+        [XmlAttribute(AttributeName = "studies")]
         public object StStudies { get; set; }
 
 
